@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Tugas Javascript - HomePage</title>
+  </head>
+  <body>
+    <div class="main-content">
+      <h1>Tugas 1 Javascript</h1>
+      <section class="card">
+        <div>
+          <p>
+            Rincian tugas <br />1. Buatlah Rumus Matematika bangun datar
+            menggunakan JavaScript <br />2. Bangun ruang sebagai berikut,
+            persegi panjang, jajar genjang, segitiga buat 1 atau 3 file,
+            <br /><br />masukan ke github dan kirim linknya ke LMS
+          </p>
+        </div>
+      </section>
+      <section class="tabss">
+        <li>
+          <button
+            class="buttontabs"
+            onclick="openTabs(event, 'PersegiPanjang')"
+            id="default"
+          >
+            Persegi Panjang
+          </button>
+        </li>
+        <li>
+          <button class="buttontabs" onclick="openTabs(event, 'JajarGenjang')">
+            Jajar Genjang
+          </button>
+        </li>
+        <li>
+          <button class="buttontabs" onclick="openTabs(event, 'Segitiga')">
+            Segitiga
+          </button>
+        </li>
+      </section>
+      <section class="card">
+        <div id="PersegiPanjang" class="tabcontent active">
+          <h3>Persegi Panjang</h3>
+          <form
+            action=""
+            id="persegiPanjang"
+            method="post"
+            onsubmit="return false;"
+          >
+            <input type="number" id="panjangPP" placeholder="Panjang" /><br />
+            <input type="number" id="lebarPP" placeholder="Lebar" /><br />
+            <button
+              id="getPersegiPanjang"
+              type="submit"
+              onclick="getDataPersegiPanjang()"
+            >
+              Submit
+            </button>
+          </form>
+          <p id="hasil1">
+            <b> Hasil Luas: </b>&nbsp;<span
+              class="hasil"
+              id="hasilLuasPP"
+            ></span>
+          </p>
+          <p>
+            <b> Hasil Keliling: </b>&nbsp;<span
+              class="hasil"
+              id="hasilKelilingPP"
+            ></span>
+          </p>
+        </div>
+        <div id="JajarGenjang" class="tabcontent">
+          <h3>Jajar Genjang</h3>
+          <form
+            action=""
+            id="jajarGenjang"
+            method="post"
+            onsubmit="return false;"
+          >
+            <input
+              type="number"
+              id="sisiAJajarGenjang"
+              placeholder="Alas"
+            /><br />
+            <input
+              type="number"
+              id="sisiBJajarGenjang"
+              placeholder="Sisi Miring"
+            /><br />
+            <input
+              type="number"
+              id="tinggiJajarGenjang"
+              placeholder="Tinggi"
+            /><br />
+            <button
+              id="getJajarGenjang"
+              type="submit"
+              onclick="getDataJajarGenjang()"
+            >
+              Submit
+            </button>
+          </form>
+          <p id="hasil1">
+            <b> Hasil Luas: </b>&nbsp;<span
+              class="hasil"
+              id="hasilLuasJajarGenjang"
+            ></span>
+          </p>
+          <p>
+            <b> Hasil Keliling: </b>&nbsp;<span
+              class="hasil"
+              id="hasilKelilingJajarGenjang"
+            ></span>
+          </p>
+        </div>
+        <div id="Segitiga" class="tabcontent">
+          <h3>Segitiga</h3>
+          <form action="" id="segitiga" method="post" onsubmit="return false;">
+            <input
+              type="number"
+              id="sisiASegitiga"
+              placeholder="Sisi A"
+            /><br />
+            <input
+              type="number"
+              id="sisiBSegitiga"
+              placeholder="Sisi B"
+            /><br />
+            <input
+              type="number"
+              id="sisiCSegitiga"
+              placeholder="Sisi C"
+            /><br />
+            <button id="getSegitiga" type="submit" onclick="getDataSegitiga()">
+              Submit
+            </button>
+          </form>
+          <p id="hasil1">
+            <b> Hasil Luas: </b>&nbsp;<span
+              class="hasil"
+              id="hasilLuasSegitiga"
+            ></span>
+          </p>
+          <p>
+            <b> Hasil Keliling: </b>&nbsp;<span
+              class="hasil"
+              id="hasilKelilingSegitiga"
+            ></span>
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script src="./scripts/persegipanjang.js"></script>
+  <script src="./scripts/jajargenjang.js"></script>
+  <script src="./scripts/segitiga.js"></script>
+  <script src="./scripts/tabs.js"></script>
+</html>
