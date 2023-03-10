@@ -14,7 +14,7 @@ function GajiTotalKaryawan() {
     document.getElementById("pilihJabatan").value == "Asisten Manager"
   ) {
     gajiPokok = 8000000;
-  } else if (document.getElementById("pilihJabatan").selectedIndex == "Staff") {
+  } else if (document.getElementById("pilihJabatan").value == "Staff") {
     gajiPokok = 5000000;
   } else {
     alert("Salah Input Jabatan");
