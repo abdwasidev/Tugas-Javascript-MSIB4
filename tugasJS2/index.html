@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Tugas Javascript 2 - MSIB</title>
+  </head>
+  <body>
+    <div class="main-content">
+      <h1>Tugas 2 Javascript</h1>
+      <section class="card">
+        <div>
+          <p>
+            Diketahui <br />Pegawai: nama_kalian <br />Jabatan : manager
+            <br />status : bebas <br />Proses: Cetak data pegawai , jabatan,
+            gaji dan lainnya dengan ketentuan <br /><br />- Gaji pokok : jika
+            jabatan manager(10), Asisten manager(8), Staff(5) Juta <br />-
+            Tunjangan Jabatan = 10% dari Gaji pokok <br />- BPJS = 10% dari gaji
+            pokok <br />- Tunjangan keluarga bagia yang sudah menikah sebesar
+            10% <br /><br />Totalkan seluruh pendapatan atau penghasilan
+            <br /><br />Masukan ke repository masing masing dan kirim linknya ke
+            LMS
+          </p>
+        </div>
+      </section>
+      <section class="card">
+        <h3>Gaji Karyawan</h3>
+        <form
+          action=""
+          id="gajiTotalKaryawan"
+          method="post"
+          onsubmit="return false;"
+        >
+          <input type="text" id="yourName" placeholder="Nama" /><br />
+          <select id="pilihJabatan" class="jabatan" placeholder="Jabatan">
+            <option>Pilih Jabatan ...</option>
+            <option value="Manager">Manager</option>
+            <option value="Asisten Manager">Asisten Manager</option>
+            <option value="Staff">Staff</option></select
+          ><br />
+          <input
+            type="number"
+            id="tunjanganJabatan"
+            placeholder="Persentase Tunjangan Jabatan (%)"
+          /><br />
+          <input
+            type="number"
+            id="bpjs"
+            placeholder="Persentase BPJS (%)"
+          /><br />
+          <select id="pilihStatus" class="jabatan" placeholder="Status">
+            <option>Pilih Status ...</option>
+            <option value="Menikah">Menikah</option>
+            <option value="Belum Menikah">Belum Menikah</option></select
+          ><br />
+          <button
+            id="gajiTotalKaryawan"
+            type="submit"
+            onclick="GajiTotalKaryawan()"
+          >
+            Submit
+          </button>
+        </form>
+        <h3>Gaji Total Karyawan</h3>
+
+        <table>
+          <tr>
+            <th>Nama</th>
+            <td><b>: &nbsp;</b><span class="hasil" id="getName"></span></td>
+          </tr>
+          <tr>
+            <th>Jabatan</th>
+            <td><b>: &nbsp;</b><span class="hasil" id="getJabatan"></span></td>
+          </tr>
+          <tr>
+            <th>Gaji Pokok</th>
+            <td>
+              <b>: &nbsp;</b><span class="hasil" id="getGajiPokok"></span>
+            </td>
+          </tr>
+          <tr>
+            <th>Tunjangan Jabatan</th>
+            <td>
+              <b>: &nbsp;</b
+              ><span class="hasil" id="getTunjanganJabatan"></span>
+            </td>
+          </tr>
+          <tr>
+            <th>BPJS</th>
+            <td><b>: &nbsp;</b><span class="hasil" id="getBPJS"></span></td>
+          </tr>
+          <tr>
+            <th>Status Pernikahan</th>
+            <td>
+              <b>: &nbsp;</b
+              ><span class="hasil" id="getStatusPernikahan"></span>
+            </td>
+          </tr>
+          <tr>
+            <th>Total Gaji</th>
+            <td>
+              <b>: &nbsp;</b><span class="hasil" id="getTotalGaji"></span>
+            </td>
+          </tr>
+        </table>
+      </section>
+    </div>
+  </body>
+  <script src="./scripts/index.js"></script>
+</html>
