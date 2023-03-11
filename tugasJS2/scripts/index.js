@@ -15,7 +15,14 @@ function GajiTotalKaryawan() {
   } else if (jabatan == "Staff") {
     gajiPokok = 5000000;
   } else {
-    alert("Salah Input Jabatan");
+    Swal.fire({
+      icon: "error",
+      title: "<h5 style='color:#6e91fe'>Oops...</h5>",
+      color: "red",
+      background: "#f2f5ff",
+      text: "Anda Salah Input Jabatan",
+      confirmButtonColor: "#6e91fe",
+    });
   }
 
   //   SWITCH CASE
@@ -28,7 +35,14 @@ function GajiTotalKaryawan() {
       tunjanganKeluarga = 0;
       break;
     default:
-      alert("Salah Input Status");
+      Swal.fire({
+        icon: "error",
+        title: "<h5 style='color:#6e91fe'>Oops...</h5>",
+        color: "red",
+        background: "#f2f5ff",
+        text: "Anda Salah Input Status",
+        confirmButtonColor: "#6e91fe",
+      });
   }
 
   //   =====================================================================
