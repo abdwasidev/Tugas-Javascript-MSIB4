@@ -8,13 +8,11 @@ function GajiTotalKaryawan() {
 
   //   IF ELSE
   //   =====================================================================
-  if (document.getElementById("pilihJabatan").value == "Manager") {
+  if (jabatan == "Manager") {
     gajiPokok = 10000000;
-  } else if (
-    document.getElementById("pilihJabatan").value == "Asisten Manager"
-  ) {
+  } else if (jabatan == "Asisten Manager") {
     gajiPokok = 8000000;
-  } else if (document.getElementById("pilihJabatan").value == "Staff") {
+  } else if (jabatan == "Staff") {
     gajiPokok = 5000000;
   } else {
     alert("Salah Input Jabatan");
@@ -22,7 +20,7 @@ function GajiTotalKaryawan() {
 
   //   SWITCH CASE
   //   =====================================================================
-  switch (document.getElementById("pilihStatus").value) {
+  switch (status) {
     case "Menikah":
       tunjanganKeluarga = 0.1;
       break;
