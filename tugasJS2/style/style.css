@@ -7,6 +7,7 @@
   --soft-color: rgba(110, 145, 254, 0.25);
   --white-bg: #ffffff;
   --black-bg: #000;
+  --green-cl: rgba(28, 150, 162, 0.5);
 }
 
 * {
@@ -40,7 +41,7 @@ h1 {
 
 .card {
   border-radius: 5px;
-  background-color: rgba(28, 150, 162, 0.5);
+  background-color: var(--green-cl);
   color: white;
 }
 

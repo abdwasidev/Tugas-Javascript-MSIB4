@@ -7,6 +7,7 @@
   --soft-color: rgba(110, 145, 254, 0.25);
   --white-bg: #ffffff;
   --black-bg: #000;
+  --green-cl: rgba(28, 150, 162, 0.5);
 }
 
 * {
@@ -40,7 +41,7 @@ h1 {
 
 .card {
   border-radius: 5px;
-  background-color: rgba(28, 150, 162, 0.5);
+  background-color: var(--green-cl);
   color: white;
 }
 
@@ -101,10 +102,10 @@ li {
 
 .buttontabs {
   width: 100%;
-  background-color: rgba(28, 150, 162, 0.5);
+  background-color: var(--green-cl);
   color: white;
   padding: 15px 20px;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 0;
 }
 
@@ -117,8 +118,8 @@ li {
 .buttontabs:active {
   background-color: #fff;
   font-weight: bold;
-  color: rgb(97, 61, 255);
-  border: 3px solid rgb(255, 61, 61);
+  color: var(--blue-color);
+  border: 3px solid var(--blue-color);
 }
 
 @media screen and (max-width: 768px) {
