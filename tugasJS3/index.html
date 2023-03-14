@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Tugas Javascript 3 - MSIB</title>
+  </head>
+  <script>
+    let p1 = { nama: "Arip", nilai: 90 };
+    let p2 = { nama: "Ali", nilai: 81 };
+    let p3 = { nama: "Aldi", nilai: 62 };
+    let p4 = { nama: "Ani", nilai: 73 };
+    let p5 = { nama: "Budi", nilai: 50 };
+
+    let person = [p1, p2, p3, p4, p5];
+  </script>
+  <body>
+    <div class="main-content">
+      <h1>Tugas 3 Javascript</h1>
+      <section class="card">
+        <div>
+          <p>
+            Lengkapi source pada latihan 11 Javascript dengan ketentuan sebagai
+            berikut: <br /><br />- set grade A - E (menggunakan if multi
+            kondisi) // A = 90 - 100, B 80 - 89 dan seterusnya sampai E
+            <br /><br />- set predikat (menggunakan swtich case) //A = Sangat
+            baik, B = Baik, C = Cukup, D= Kurang, E = SAngat kurang <br />
+            <br />- set warna warni table menggunakan looping <br />
+            <br />Upload source di github dan kirim linknya ke LMS
+          </p>
+        </div>
+      </section>
+      <section class="card">
+        <h3>Daftar Nilai Mahasiswa</h3>
+        <h3>
+          <table style="padding: 10; text-align: center; width: 100%">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Nilai</th>
+                <th>Grade</th>
+                <th>Predikat</th>
+                <th>Keterangan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <script>
+                let no = 1;
+                let bgcolor = [
+                  "fff",
+                  "#6E91FE",
+                  "#FF92B9",
+                  "#37FF6F",
+                  "#FFB992",
+                  "#E992FF",
+                ];
+                for (mahasiswa of person) {
+                  let grade, predikat;
+                  let cekNilai = mahasiswa.nilai;
+                  let keterangan = cekNilai >= 60 ? "Lulus" : "Gagal";
+
+                  if (cekNilai >= 90 && cekNilai <= 100) {
+                    grade = "A";
+                  } else if (cekNilai >= 80 && cekNilai < 90) {
+                    grade = "B";
+                  } else if (cekNilai >= 70 && cekNilai < 80) {
+                    grade = "C";
+                  } else if (cekNilai >= 60 && cekNilai < 70) {
+                    grade = "D";
+                  } else if (cekNilai <= 60) {
+                    grade = "E";
+                  } else {
+                    ("Anda Salah Input Data");
+                  }
+
+                  switch (grade) {
+                    case "A":
+                      predikat = "Sangat Baik";
+                      break;
+                    case "B":
+                      predikat = "Baik";
+                      break;
+                    case "C":
+                      predikat = "Cukup";
+                      break;
+                    case "D":
+                      predikat = "Kurang";
+                      break;
+                    case "E":
+                      predikat = "Sangat Kurang";
+                      break;
+                    default:
+                      "Anda Salah Input Data";
+                  }
+
+                  document.write(`<tr style="color: white" bgcolor="${
+                    bgcolor[no]
+                  }">
+                <td>${no++}</td>
+                <td>${mahasiswa.nama}</td>
+                <td>${mahasiswa.nilai}</td>
+                <td>${grade}</td>
+                <td>${predikat}</td>
+                <td>${keterangan}</td>
+            </tr>`);
+                }
+              </script>
+            </tbody>
+          </table>
+        </h3>
+      </section>
+    </div>
+  </body>
+</html>
