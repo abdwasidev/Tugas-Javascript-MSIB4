@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css"
+      rel="stylesheet"
+    />
+    <title>Tugas Javascript 4 - MSIB</title>
+  </head>
+  <body>
+    <div class="main-content">
+      <h1>Tugas 4 Javascript</h1>
+      <section class="card">
+        <div>
+          <p>
+            1. Lengkapilah form dari latihan 15js menggunakan CSS dan table
+            <br /><br />2. Perbagus tampilannya <br /><br />3. Lengkapi
+            perhitungannya dengan: <br />- pembagian <br />- perkalian <br />-
+            pangkat <br /><br />4. jika form input dari angka 1 dan 2 kosong dan
+            user klik button, maka tampilkan "Maaf angka belum terisi"
+          </p>
+        </div>
+      </section>
+      <section class="card">
+        <h3>Kalkulator</h3>
+        <form action="" id="Kalkulator" method="post" onsubmit="return false;">
+          <input
+            type="number"
+            id="setFirstNumber"
+            name="setFirstNumber"
+            placeholder="Input angka pertama"
+          /><br />
+          <input
+            type="number"
+            id="setSecondNumber"
+            name="setSecondNumber"
+            placeholder="Input angka kedua"
+          /><br />
+          <div class="btn-calculator">
+            <button
+              id="calculatorTambah"
+              type="submit"
+              onclick="CalculatorTambah()"
+            >
+              +
+            </button>
+            <button
+              id="calculatorKurang"
+              type="submit"
+              onclick="CalculatorKurang()"
+            >
+              -
+            </button>
+            <button
+              id="calculatorKali"
+              type="submit"
+              onclick="CalculatorKali()"
+            >
+              x
+            </button>
+            <button
+              id="calculatorBagi"
+              type="submit"
+              onclick="CalculatorBagi()"
+            >
+              :
+            </button>
+            <button
+              id="calculatorPangkat"
+              type="submit"
+              onclick="CalculatorPangkat()"
+            >
+              x<sup>n</sup>
+            </button>
+          </div>
+        </form>
+        <h3>Hasil Kalkulator</h3>
+
+        <table>
+          <tr>
+            <div id="getHasilTambah"></div>
+          </tr>
+          <tr>
+            <div id="getHasilKurang"></div>
+          </tr>
+          <tr>
+            <div id="getHasilKurang"></div>
+          </tr>
+          <tr>
+            <div id="getHasilKurang"></div>
+          </tr>
+          <tr>
+            <div id="getHasilPangkat"></div>
+          </tr>
+        </table>
+      </section>
+    </div>
+  </body>
+  <script src="./scripts/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+</html>
