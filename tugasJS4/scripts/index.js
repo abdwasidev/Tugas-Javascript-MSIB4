@@ -158,10 +158,6 @@ function CalculatorPangkat() {
 
   total = parseFirstNumber ** parseSecondNumber;
 
-  const para = document.createElement("p");
-  para.innerText = "This is a paragraph";
-  document.body.appendChild(para);
-
   document.getElementById("getHasilTambah").innerHTML =
     "<th> " +
     firstNumber +
