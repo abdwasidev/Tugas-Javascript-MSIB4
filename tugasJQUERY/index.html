@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css"
+      rel="stylesheet"
+    />
+    <title>Tugas JQuery - MSIB</title>
+    <script src="../jquery/jquery-3.6.4.js"></script>
+  </head>
+  <body>
+    <div class="main-content">
+      <h1>Tugas JQuery</h1>
+      <section class="card">
+        <div>
+          <p>
+            Buatlah file jquery dengan skenario<br /><br />
+
+            Ada sebuah gambar yang ditampilkan pada web, ketika gambar tersebut
+            diklik maka gambar tersebut menjadi hilang (hide)
+
+            <br /><br />jika 1 gambar berhasil, tambahkan menjadi 3 gambar
+            sekaligus pada satu file
+
+            <br /><br />Buatlah dengan menggunakan jquery sederhana dan
+            kumpulkan di github masing-masing lalu linknya masukan ke LMS
+          </p>
+        </div>
+      </section>
+      <section class="card">
+        <h3>Image</h3>
+        <div class="task">
+          <div>
+            <img class="img third-image" src="img/StarchasmNyx.png" alt="" />
+          </div>
+          <div>
+            <img class="img first-image" src="img/honkai.png" alt="" />
+          </div>
+          <div>
+            <img
+              class="img second-image"
+              src="img/SwallowtailPhantasm.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="task">
+          <button class="reset-btn">Reset</button>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script>
+    $(document).ready(function () {
+      $(".img.first-image").click(function () {
+        $(".img.first-image")
+          .hide(1000)
+          .then(
+            jQuery.getScript(
+              "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js",
+              function () {
+                Swal.fire({
+                  icon: "success",
+                  title: "<h5 style='color:#6e91fe'>Selamat</h5>",
+                  color: "green",
+                  background: "#f2f5ff",
+                  text: "Berhasil Menyembunyikan Gambar",
+                  confirmButtonColor: "#6e91fe",
+                });
+              }
+            )
+          );
+      });
+
+      $(".img.second-image").click(function () {
+        $(".img.second-image")
+          .hide(1000)
+          .then(
+            jQuery.getScript(
+              "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js",
+              function () {
+                Swal.fire({
+                  icon: "success",
+                  title: "<h5 style='color:#6e91fe'>Selamat</h5>",
+                  color: "green",
+                  background: "#f2f5ff",
+                  text: "Berhasil Menyembunyikan Gambar",
+                  confirmButtonColor: "#6e91fe",
+                });
+              }
+            )
+          );
+      });
+
+      $(".img.third-image").click(function () {
+        $(".img.third-image")
+          .hide(1000)
+          .then(
+            jQuery.getScript(
+              "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js",
+              function () {
+                Swal.fire({
+                  icon: "success",
+                  title: "<h5 style='color:#6e91fe'>Selamat</h5>",
+                  color: "green",
+                  background: "#f2f5ff",
+                  text: "Berhasil Menyembunyikan Gambar",
+                  confirmButtonColor: "#6e91fe",
+                });
+              }
+            )
+          );
+      });
+
+      $(".reset-btn").click(function () {
+        location.reload(true);
+      });
+    });
+  </script>
+</html>
